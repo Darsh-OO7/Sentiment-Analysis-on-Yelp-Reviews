@@ -157,14 +157,23 @@ The graph-based Logistic Regression model achieved the highest accuracy at **89.
 
 ---
 
-## 📷 Sample Results
+## 📊 Visual Results
 
-Include screenshots such as:
+### BERT with LoRA Confusion Matrix
 
-- Confusion Matrix
-- ROC Curve
-- Accuracy Comparison
-- Training Curves
+![BERT with LoRA Confusion Matrix](Assets/bert_lora_confusion_matrix.png)
+
+### Graph-Based Logistic Regression Confusion Matrix
+
+![Graph-Based Logistic Regression Confusion Matrix](Assets/graph_logistic_regression_confusion_matrix.png)
+
+### Review Rating Distribution
+
+![Review Rating Distribution](Assets/review_rating_distribution.png)
+
+### Feature Correlation Matrix
+
+![Correlation Matrix](Assets/correlation_matrix.png)
 
 ---
 
