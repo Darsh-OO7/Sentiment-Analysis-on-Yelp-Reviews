@@ -24,9 +24,16 @@ The project evaluates traditional machine learning algorithms alongside deep lea
 
 ## 📂 Dataset
 
-**Source:** Yelp Open Dataset
+The project uses review and business data from the Yelp Open Dataset.
 
-The dataset contains customer reviews collected from Yelp.
+For sentiment modeling, a balanced subset of **30,000 restaurant reviews** was created:
+
+- **18,485 positive reviews**
+- **11,515 negative reviews**
+- **24,000 training samples**
+- **6,000 testing samples**
+- Binary sentiment classification
+- Positive and negative review labels
 
 ### Data Characteristics
 
@@ -35,7 +42,6 @@ The dataset contains customer reviews collected from Yelp.
 - Binary Sentiment Classification
 - Text-based dataset
 
-*(Add the exact number of reviews if available.)*
 
 Example:
 
@@ -131,17 +137,23 @@ Models were evaluated using:
 
 ---
 
-## 📈 Results
+## 📈 Model Performance
+
+The models were evaluated on a test set of 6,000 Yelp reviews using accuracy, precision, recall, and F1 score.
 
 | Model | Accuracy | Precision | Recall | F1 Score |
-|--------|----------|-----------|--------|----------|
-| Logistic Regression | XX | XX | XX | XX |
-| SVM | XX | XX | XX | XX |
-| Random Forest | XX | XX | XX | XX |
-| LSTM | XX | XX | XX | XX |
-| BERT | XX | XX | XX | XX |
+|---|---:|---:|---:|---:|
+| Logistic Regression (Graph-Based Features) | 89.78% | 92.06% | 87.00% | 89.46% |
+| Support Vector Machine (Graph-Based Features) | 89.28% | 91.98% | 86.00% | 88.89% |
+| Random Forest (Graph-Based Features) | 86.53% | 89.25% | 83.00% | 86.01% |
+| LSTM | 83.18% | 89.09% | 80.33% | 84.48% |
+| BERT without Fine-Tuning | 82.06% | 90.33% | 79.36% | 84.49% |
+| Fine-Tuned BERT | 83.64% | 95.37% | 77.44% | 85.48% |
+| BERT with LoRA | 88.32% | 90.91% | 90.23% | **90.57%** |
 
-*(Replace with your actual results.)*
+### Key Result
+
+The graph-based Logistic Regression model achieved the highest accuracy at **89.78%**, while **BERT with LoRA achieved the strongest F1 score of 90.57%**, providing the best balance between precision and recall.
 
 ---
 
